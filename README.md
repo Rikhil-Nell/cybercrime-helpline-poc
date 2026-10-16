@@ -2,14 +2,23 @@
 
 Voice helpline desk for India's cybercrime reporting flow: LiveKit telephony, Deepgram STT/TTS, OpenAI agent with a scoped knowledge base (pgvector), and a React operations dashboard.
 
-## Quick start (Windows)
+## Quick start
 
 1. Copy `backend/.env.example` → `backend/.env` and fill in keys.
-2. Start Docker Desktop.
+2. Start Docker (Docker Desktop on Windows/macOS, or the Docker daemon on Linux).
 3. From the repo root:
+
+**Windows (PowerShell)**
 
 ```powershell
 .\scripts\run.ps1
+```
+
+**Linux / macOS**
+
+```bash
+chmod +x scripts/run.sh   # once, if needed
+./scripts/run.sh
 ```
 
 4. Open **http://127.0.0.1:5173** — dial tab for outbound tests, or call your Twilio number for inbound.

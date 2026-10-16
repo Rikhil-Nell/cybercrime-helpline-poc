@@ -56,11 +56,19 @@ uv run python scripts/seed_knowledge.py --force   # re-ingest everything
 
 From repo root:
 
+**Windows**
+
 ```powershell
 .\scripts\run.ps1
 ```
 
-Same as `.\scripts\dev.ps1`. Starts Postgres, API (`8000`), LiveKit worker, dashboard (`5173`).
+**Linux / macOS**
+
+```bash
+./scripts/run.sh
+```
+
+Same as `dev.ps1` / `dev.sh`. Starts Postgres, API (`8000`), LiveKit worker, dashboard (`5173`).
 
 - Dashboard: http://127.0.0.1:5173  
 - Health: http://127.0.0.1:8000/api/health  
@@ -152,7 +160,7 @@ Retrieval uses **OpenAI embeddings + pgvector**, not raw prompt dump.
 
 ## Manual run (separate terminals)
 
-If you prefer not to use `run.ps1`:
+If you prefer not to use `run.ps1` / `run.sh`:
 
 ```powershell
 docker compose up -d
