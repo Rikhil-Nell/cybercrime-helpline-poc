@@ -1,0 +1,32 @@
+[project]
+name = "helpline"
+version = "0.1.0"
+description = "LiveKit voice worker and dashboard API in one project."
+authors = [
+    { name = "Rikhil Nellimarla", email = "nrikhil@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "asyncpg>=0.31.0",
+    "fastapi>=0.141.1",
+    "livekit-agents[silero,turn-detector]>=1.8.2",
+    "livekit-api>=1.2.1",
+    "livekit-plugins-deepgram>=1.8.2",
+    "livekit-plugins-openai>=1.8.2",
+    "markitdown[docx,pdf,pptx,xlsx]>=0.1.8",
+    "openai>=2.54.0",
+    "pgvector>=0.5.0",
+    "pydantic-settings>=2.15.0",
+    "pypdf>=6.19.0",
+    "python-dotenv>=1.2.3",
+    "python-multipart>=0.0.32",
+    "sqlalchemy>=2.0.54",
+    "uvicorn[standard]>=0.53.0",
+]
+
+[project.scripts]
+helpline = "helpline:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
